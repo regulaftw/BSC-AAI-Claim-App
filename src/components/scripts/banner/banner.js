@@ -88,22 +88,17 @@ function Banner({ _props }) {
             <ErrorPopup showError={error} />
             <LoadingPopup loading={loading}/>
 
-            <h1>Claim AAI Tracker NFT with AVTM Tokens</h1>
+            <h1>Claim AAI Tokens with AAI Tracker NFTs</h1>
             <p>
                 <b>
-                    If you had registered for the swap, click here to claim your AAI
+                Make sure you are connected to BSC network and simply receive your AAI Token airdrop by clicking Claim 
                 </b>
             </p>
-            <div className='image-container first'>
-                <img src={tokenimage} className='images' />
-            </div>
+            
             <div class="arrow-container">
-                <div class="arrow"></div>
+            <div><img src={aai_token} className='images' /></div>
             </div>
-            <div className='image-container second'>
-                <div><img src={aai_token} className='images' />
-                </div>
-            </div>
+           
             <button className="centered-button" onClick={(e) => { distributeTokens(UserWalletAddress); console.log("Reached + " + error) }}>Claim</button>
         </div>
     );
