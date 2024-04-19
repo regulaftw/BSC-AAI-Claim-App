@@ -1,0 +1,67 @@
+/* errorPopup.css */
+
+.error-popup {
+    position: fixed; /* Fixed position to stay in place during scroll */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center; /* Centers the popup vertically */
+    justify-content: center; /* Centers the popup horizontally */
+    visibility: hidden; /* Hidden by default */
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s linear; /* Smooth transition for the popup effect */
+    z-index: 2; /* Makes sure the popup is above other content */
+    background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent background */
+  }
+  
+  .error-popup.visible {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .popup-content {
+    background-color: white; /* Background color for the popup */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for 3D effect */
+    width: 20%; /* Takes up 20% of the screen width */
+    min-width: 300px; /* Minimum width */
+    box-sizing: border-box; /* Includes padding and border in width calculation */
+    text-align: center; /* Centers text and children horizontally */
+  }
+  
+  h1 {
+    color: #333; /* Dark grey color for text */
+    margin-top: 0;
+    font-size: 18px; /* Larger text size for headings */
+  }
+  
+  p {
+    color: #666; /* Lighter grey color for paragraph */
+    font-size: 14px; /* Standard text size */
+    margin: 5px 0; /* Spacing between paragraphs */
+  }
+  
+  button {
+    background-color: #007BFF; /* Bootstrap primary blue */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Larger font size for button text */
+    outline: none; /* Removes the outline */
+    display: block; /* Makes the button a block element to fit width */
+    margin: 10px auto 0; /* Centers button horizontally and adds space above */
+  }
+  
+  button:hover {
+    background-color: #0056b3; /* Darker shade of blue on hover */
+  }
+  
+  button:focus {
+    outline: none; /* Removes the outline on focus */
+  }
+  
